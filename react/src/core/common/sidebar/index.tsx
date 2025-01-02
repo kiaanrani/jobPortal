@@ -275,7 +275,7 @@ const Sidebar = () => {
                                 <span>{title?.label}</span>
                                 {title?.dot && (
                                 <span className="badge badge-danger fs-10 fw-medium text-white p-1">
-                                    Hot
+                                    {/* Hot */}
                                 </span>
                                 )}
                                 <span className={title?.submenu ? "menu-arrow" : ""} />
