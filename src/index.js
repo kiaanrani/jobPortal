@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import connectDB  from "./config/DB.js";
-
+import DepartmentRoute from "./routes/DepartmentRoute.js"
 
 import EmployeeRoute from "./routes/EmployeeRoute.js";
 
@@ -29,7 +29,11 @@ app.use(cors());
 // createEmployeeTable();
 const sequelize = connectDB();
 
-app.use("/",EmployeeRoute)
+// app.use("/",EmployeeRoute)
+// app.use("/empDepartment",DepartmentRoute)
+app.use("/empDepartment",(req, res) => {
+  res.send('Hello, empDepartment!');
+})
 
 app.get('/', (req, res) => {
   res.send('Hello, World!');
